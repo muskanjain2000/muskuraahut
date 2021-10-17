@@ -1,0 +1,19 @@
+//pattern 
+//3 3 3 3 3 
+//3 2 2 2 3 
+//3 2 1 2 3 
+//3 2 2 2 3 
+//3 3 3 3 3 
+
+public class MatrixPattern{
+   public static void main(String arg[]){
+      int N=3;
+      int dbld_N=2*N;
+      for(int row=1;row<=dbld_N-1;row++){
+       for(int col=1;col<=dbld_N-1;col++){ 
+         int atEveryIndex=N+1- Math.min(Math.min(row,col),Math.min(dbld_N-row,dbld_N-col));
+         System.out.print(atEveryIndex+" ");
+       }
+       System.out.println();
+     }
+   }
